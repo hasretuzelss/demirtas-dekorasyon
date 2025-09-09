@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demirtaş Dekorasyon | İletişim</title>
+  <meta name="description" content="Demirtaş Dekorasyon iletişim bilgileri: Telefon, WhatsApp ve Instagram üzerinden bize ulaşabilirsiniz.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("arkaplan.jpg"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #23caa0ce;
+    }
+
+    header p {
+      margin: 5px 0;
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #23caa0ce;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #13f0f0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #galeri img {
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #0a6f9e;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0a6f9e;
+    }
+
+    input,
+    select {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Demirtaş Dekorasyon</h1>
+    <p>Profesyonel Boya, Sıva ve Tadilat Hizmetleri</p>
+    <p><strong>Tel:</strong> <a href="tel:+905555555555">0555 555 55 55</a></p>
+  </header>
+
+  <section id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p></p>
+  </section>
+
+  <section id="hizmetler">
+    <h2>Hizmetler</h2>
+    <ul>
+      <li>Boya ve badana</li>
+      <li>Alçı ve sıva işleri</li>
+      <li>Çatı ve su yalıtımı</li>
+      <li>İç/dış cephe tadilat</li>
+    </ul>
+  </section>
+
+  <section id="galeri">
+    <h2>Yaptığımız İşlerden Bazıları</h2>
+    <img src="is1.jpeg" alt="sıvanmış oda örneği" width="300">
+    <img src="is2.jpeg" alt="boyanmış oda örneği" width="300">
+  </section>
+
+  <section id="fiyat-hesapla">
+    <h2>Tahmini Fiyat Hesapla</h2>
+    <p>Alan bilgisine göre yaklaşık fiyat hesabı yapabilirsiniz.</p>
+    <input type="number" id="metrekare" placeholder="Alan (m²)">
+    <select id="is">
+      <option value="boya">Boya</option>
+      <option value="sıva">Sıva</option>
+    </select>
+    <button onclick="hesapla()">Fiyatı Hesapla</button>
+    <p id="sonuc"></p>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <p>Telefon: <a href="tel:+905555555555">0555 555 55 55</a></p>
+    <p>WhatsApp: <a href="https://wa.me/905555555555">Bize WhatsApp'tan Yaz</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/demi.rtasdekorasyon?igsh=MWJwdDJ5bDQyMGt3Zw%3D%3D&utm_source=qr">Instagram Sayfamız</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 İbrahim Usta - Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    function hesapla() {
+      const m2 = document.getElementById("metrekare").value;
+      const is = document.getElementById("is").value;
+      let fiyat = 0;
+
+      if (is === "boya") fiyat = m2 * 40;
+      else if (is === "sıva") fiyat = m2 * 50;
+
+      document.getElementById("sonuc").innerText = "Tahmini Fiyat: " + fiyat + "₺";
+    }
+  </script>
+
+</body>
+
+</html>
